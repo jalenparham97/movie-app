@@ -1,0 +1,14 @@
+{
+  "name": "movie-app",
+  "version": "1.0.0",
+  "description": "A movie search app users can use to find movies they want to watch",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass app/scss/style.scss app/css/style.css -w"
+  },
+  "author": "Jalen Parham",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
