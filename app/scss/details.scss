@@ -1,0 +1,44 @@
+$text-color: #fff;
+
+.details--container {
+  display: flex;
+  color: $text-color;
+  width: 80%;
+  margin: 70px auto;
+  justify-content: space-between;
+
+  & img {
+    height: 450px;
+  }
+
+  & .details {
+    margin-left: 50px;
+    max-height: 400px;
+
+    & h1 {
+      font-size: 40px;
+    }
+
+    & .detail--items {
+      margin-top: 30px;
+
+      & p {
+        margin-bottom: 20px;
+      }
+
+      & button {
+        padding: 8px;
+        background: transparent;
+        color: rgba($text-color, .4);
+        border: 1px solid rgba($text-color, .4); 
+        font-size: 16px;
+        margin-right: 10px;
+
+        &:hover {
+          cursor: pointer;
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

@@ -16,19 +16,4 @@
       </form>
     </nav>
   </header>
-
-  <section class="main__section">
-    <ul class="movie__container">
-      <li ng-repeat="movie in $ctrl.results" class="movie">
-        <img ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="Movie Poster">
-        <div class="buttons">
-          <button>Add to MyList</button>
-          <button ng-click="$ctrl.getMovie(movie.id)">More</button>
-        </div> 
-      </li>
-    </ul>
-  </section>
-
-  <button class="load--more">Load More</button>
 </div>
-

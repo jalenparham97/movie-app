@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #141414;
+  font-family: 'Open Sans', sans-serif; }
+
+.main--container {
+  width: 90%;
+  margin: 0 auto; }
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center; }
+  .header__nav .nav__container {
+    display: flex;
+    align-items: center; }
+    .header__nav .nav__container--logo {
+      color: #E50913;
+      font-size: 30px;
+      text-decoration: none; }
+    .header__nav .nav__container--navigation {
+      display: flex;
+      margin-left: 20px;
+      list-style: none;
+      align-items: center; }
+      .header__nav .nav__container--navigation .item {
+        margin-right: 20px; }
+        .header__nav .nav__container--navigation .item a {
+          color: #fff;
+          text-decoration: none; }
+  .header__nav .search--container {
+    display: flex; }
+    .header__nav .search--container .search--button, .header__nav .search--container .search--input {
+      padding: 8px;
+      background: transparent;
+      border: 1px solid #fff; }
+    .header__nav .search--container .search--button {
+      width: 50px; }
+      .header__nav .search--container .search--button:hover {
+        cursor: pointer; }
+    .header__nav .search--container .search--input {
+      width: 200px;
+      font-size: 16px;
+      color: #fff;
+      outline: none; }
+    .header__nav .search--container .search--icon {
+      color: #fff;
+      font-size: 16px; }
+
+.main__section {
+  margin-top: 70px; }
+  .main__section .movie__container {
+    display: grid;
+    margin: 0 auto;
+    grid-gap: 30px;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    list-style: none; }
+    .main__section .movie__container li {
+      color: #fff;
+      width: 100%;
+      margin-bottom: 20px;
+      height: 100%; }
+      .main__section .movie__container li img {
+        width: 100%;
+        height: 300px; }
+      .main__section .movie__container li .buttons {
+        display: flex;
+        justify-content: space-between; }
+        .main__section .movie__container li .buttons button {
+          padding: 8px;
+          background: transparent;
+          color: rgba(255, 255, 255, 0.4);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          font-size: 16px; }
+          .main__section .movie__container li .buttons button:hover {
+            cursor: pointer;
+            color: #fff; }
+
+.load--more {
+  width: 100%;
+  background: transparent;
+  padding: 8px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4); }
+  .load--more:hover {
+    cursor: pointer;
+    color: #fff; }

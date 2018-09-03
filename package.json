@@ -4,7 +4,10 @@
   "description": "A movie search app users can use to find movies they want to watch",
   "main": "index.js",
   "scripts": {
-    "compile:scss": "node-sass app/scss/style.scss app/css/style.css -w"
+    "compile:main": "node-sass app/scss/mainPage.scss app/css/mainPage.css -w",
+    "compile:movies": "node-sass app/scss/movies.scss app/css/movies.css -w",
+    "compile:details": "node-sass app/scss/details.scss app/css/details.css -w"
+
   },
   "author": "Jalen Parham",
   "license": "ISC",

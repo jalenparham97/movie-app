@@ -17,18 +17,22 @@
     </nav>
   </header>
 
-  <section class="main__section">
-    <ul class="movie__container">
-      <li ng-repeat="movie in $ctrl.results" class="movie">
-        <img ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="Movie Poster">
+  <section class="details--container">
+    <img ng-src="{{ $ctrl.movie.Poster }}" alt="Movie Poster">
+    <section class="details">
+      <h1>{{ $ctrl.movie.Title }}</h1>
+      <section class="detail--items">
+        <p>Year: {{ $ctrl.movie.Year }}</p>
+        <p>Actors: {{ $ctrl.movie.Actors }}</p>
+        <p>Director: {{ $ctrl.movie.Director }}</p>
+        <p>Metacritic: {{ $ctrl.movie.Ratings[2].Value }}</p>
+        <p>Genre: {{ $ctrl.movie.Genre }}</p>
+        <p>Plot: {{ $ctrl.movie.Plot }}</p>
         <div class="buttons">
-          <button>Add to MyList</button>
-          <button ng-click="$ctrl.getMovie(movie.id)">More</button>
-        </div> 
-      </li>
-    </ul>
+          <button>Add To MyList</button>
+          <button>See Trailer</button>
+        </div>
+      </section>
+    </section>
   </section>
-
-  <button class="load--more">Load More</button>
 </div>
-

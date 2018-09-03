@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+$background-black: #141414;
+$text-color: #fff;
+$red-color: #E50913;
+$button-grey: rgba(131, 130, 130, .3);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $background-black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main--container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding:  20px 0;  
+  align-items: center;
+
+  & .nav__container {
+    display: flex;
+    align-items: center;
+    
+
+    &--logo {
+      color: $red-color;
+      font-size: 30px;
+      text-decoration: none;
+    }
+
+    &--navigation {
+      display: flex;
+      margin-left: 20px;
+      list-style: none;
+      align-items: center;
+      
+      & .item {
+        margin-right: 20px;
+        
+        & a {
+          color: $text-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  & .search--container {
+    display: flex;
+
+    & .search--button, .search--input {
+      padding: 8px;
+      background: transparent;
+      border: 1px solid $text-color;
+    }
+
+    & .search--button {
+      width: 50px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    & .search--input {
+      width: 200px;
+      font-size: 16px;
+      color: $text-color;
+      outline: none;
+    }
+    
+    
+    & .search--icon {
+      color: $text-color;
+      font-size: 16px;
+    }
+  }  
+}
+
+.main__section {
+  margin-top: 70px;
+
+
+  & .movie__container {
+    display: grid;
+    margin: 0 auto;
+    grid-gap: 30px;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto; 
+    list-style: none;
+  
+  
+    & li {
+      color: $text-color;
+      width: 100%;
+      margin-bottom: 20px;
+      height: 100%;
+
+      & img {
+        width: 100%;
+        height: 300px;
+      }
+
+      & .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        & button {
+          padding: 8px;
+          background: transparent;
+          color: rgba($text-color, .4);
+          border: 1px solid rgba($text-color, .4); 
+          font-size: 16px;
+          
+          &:hover {
+            cursor: pointer;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.load--more {
+  width: 100%;
+  background: transparent;
+  padding: 8px;
+  font-size: 16px;
+  color: rgba($text-color, .4);
+  border: 1px solid rgba($text-color, .4);
+
+  &:hover {
+    cursor: pointer;
+    color: $text-color;
+  }
+}
