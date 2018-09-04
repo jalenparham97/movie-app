@@ -11,7 +11,6 @@ function MovieService($http) {
   }
 
   vm.search = (searchWord) => {
-
     return $http({
       method: "GET",
       url: `https://api.themoviedb.org/3/search/movie?api_key=422b1f14ef4eff0f32a9894fac9b11c6&language=en-US&query=${searchWord}&page=1&include_adult=false`
