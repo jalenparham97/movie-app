@@ -5,7 +5,7 @@
 
 body {
   background: #141414;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Helvetica Neue',Helvetica, Arial, sans-serif; }
 
 .main--container {
   width: 90%;
@@ -92,3 +92,58 @@ body {
   .load--more:hover {
     cursor: pointer;
     color: #fff; }
+
+.details--container {
+  display: flex;
+  color: #fff;
+  width: 80%;
+  margin: 70px auto;
+  justify-content: space-between; }
+  .details--container img {
+    height: 450px; }
+  .details--container .details {
+    margin-left: 50px;
+    max-height: 400px; }
+    .details--container .details h1 {
+      font-size: 40px; }
+    .details--container .details .detail--items {
+      margin-top: 30px; }
+      .details--container .details .detail--items p {
+        margin-bottom: 20px; }
+      .details--container .details .detail--items button {
+        padding: 8px;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        font-size: 16px;
+        margin-right: 10px; }
+        .details--container .details .detail--items button:hover {
+          cursor: pointer;
+          color: #fff; }
+
+.my--list--title {
+  color: #fff;
+  font-weight: 400; }
+
+.movie__container--list {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none; }
+  .movie__container--list li {
+    margin: 0px 30px 50px 0px; }
+  .movie__container--list img {
+    height: 300px;
+    width: 232px; }
+  .movie__container--list .buttons {
+    display: flex;
+    justify-content: space-between; }
+    .movie__container--list .buttons button {
+      padding: 8px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 16px; }
+      .movie__container--list .buttons button:hover {
+        cursor: pointer;
+        color: #fff; }

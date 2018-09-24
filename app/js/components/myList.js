@@ -3,11 +3,18 @@
 const myList = {
   templateUrl: `app/js/templates/myList.html`,
 
-  constroller: ["MylistService", function(MylistService) {
+  controller: ["MylistService", "SearchService", "$location", function(MylistService, SearchService, $location) {
     const vm = this;
     vm.list = MylistService.list;
 
-    console.log(vm.list);
+    vm.getMovie = id => {
+      SearchService.getImdb(id).then(() => {
+        vm.movie = SearchService.imdb;
+        $location.url("/details");
+      });
+    }
+
+    
   }]
 }
 

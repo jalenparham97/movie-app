@@ -3,7 +3,7 @@
 const mainPage = {
   templateUrl: `app/js/templates/mainPage.html`,
 
-  controller: ["SearchService", "$location", function(SearchService, $location) {
+  controller: ["SearchService", "$location", "MylistService", function(SearchService, $location, MylistService) {
     const vm = this;
 
     SearchService.resetResultsArr();
@@ -20,6 +20,8 @@ const mainPage = {
         $location.url("/details");
       });
     }
+
+    vm.addToList = movie => MylistService.addToList(movie);
 
     vm.loadMore = () => SearchService.loadMore();
   }]

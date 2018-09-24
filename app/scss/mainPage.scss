@@ -12,7 +12,8 @@ $button-grey: rgba(131, 130, 130, .3);
 
 body {
   background: $background-black;
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Helvetica Neue',Helvetica, Arial, sans-serif;
 }
 
 .main--container {
@@ -142,5 +143,87 @@ body {
   &:hover {
     cursor: pointer;
     color: $text-color;
+  }
+}
+
+.details--container {
+  display: flex;
+  color: $text-color;
+  width: 80%;
+  margin: 70px auto;
+  justify-content: space-between;
+
+  & img {
+    height: 450px;
+  }
+
+  & .details {
+    margin-left: 50px;
+    max-height: 400px;
+
+    & h1 {
+      font-size: 40px;
+    }
+
+    & .detail--items {
+      margin-top: 30px;
+
+      & p {
+        margin-bottom: 20px;
+      }
+
+      & button {
+        padding: 8px;
+        background: transparent;
+        color: rgba($text-color, .4);
+        border: 1px solid rgba($text-color, .4); 
+        font-size: 16px;
+        margin-right: 10px;
+
+        &:hover {
+          cursor: pointer;
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+.my--list--title {
+  color: $text-color;
+  font-weight: 400;
+}
+
+.movie__container--list {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  & li {
+    margin: 0px 30px 50px 0px;
+  }
+
+  & img {
+    height: 300px;
+    width: 232px;
+  }
+
+  & .buttons {
+    display: flex;
+    justify-content: space-between;
+
+    & button {
+      padding: 8px;
+      background: transparent;
+      color: rgba($text-color, .4);
+      border: 1px solid rgba($text-color, .4); 
+      font-size: 16px;
+      
+      &:hover {
+        cursor: pointer;
+        color: $text-color;
+      }
+    }
   }
 }
