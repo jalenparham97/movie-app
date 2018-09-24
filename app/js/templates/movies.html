@@ -8,7 +8,7 @@
           <li class="item"><a href="#!/tv">TV Shows</a></li>
           <li class="item"><a href="#!/movies">Movies</a></li>
           <li class="item"><a href="#!/movies">Discover</a></li>
-          <li class="item"><a href="#!/movies">MyList</a></li>
+          <li class="item"><a href="#!/list">MyList</a></li>
         </ul>
       </div>
       
@@ -24,12 +24,12 @@
       <li ng-repeat="movie in $ctrl.results" class="movie">
         <img ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="Movie Poster">
         <div class="buttons">
-          <button>Add to MyList</button>
+          <button ng-click="$ctrl.addToList(movie)">Add to MyList</button>
           <button ng-click="$ctrl.getMovie(movie.id)">More</button>
         </div> 
       </li>
     </ul>
   </section>
 
-  <button class="load--more">Load More</button>
+  <button class="load--more" ng-click="$ctrl.loadMore()">Load More</button>
 </div>

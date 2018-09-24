@@ -7,7 +7,7 @@ angular
       .when("/movies", {
         template: `<movies></movies>`
       })
-      .when("/favs", {
+      .when("/list", {
         template: `<my-list></my-list>`
       })
       .when("/tv", {

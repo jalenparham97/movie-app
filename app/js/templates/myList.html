@@ -1,0 +1,47 @@
+<div class="main--container">
+  <header class="header">
+    <nav class="header__nav">
+      <div class="nav__container">
+        <p><a href="#" class="nav__container--logo">MyFlix</a></p>
+        <ul class="nav__container--navigation">
+          <li class="item"><a href="#!/home">Home</a></li>
+          <li class="item"><a href="#!/tv">TV Shows</a></li>
+          <li class="item"><a href="#!/movies">Movies</a></li>
+          <li class="item"><a href="#!/movies">Discover</a></li>
+          <li class="item"><a href="#!/list">MyList</a></li>
+        </ul>
+      </div>
+      
+      <form ng-submit="$ctrl.search($ctrl.query)"class="search--container">
+        <button class="search--button"><i class="fas fa-search search--icon"></i></button>
+        <input ng-model="$ctrl.query" type="text" class="search--input" placeholder="Titles, Genres, Year">
+      </form>
+    </nav>
+  </header>
+
+  <section>
+    
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- <section class="main__section">
+      <ul class="movie__container">
+        <li ng-repeat="movie in $ctrl.results" class="movie">
+          <img ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="Movie Poster">
+          <div class="buttons">
+            <button>Add to MyList</button>
+            <button ng-click="$ctrl.getMovie(movie.id)">More</button>
+          </div> 
+        </li>
+      </ul>
+    </section>
+  
+    <button class="load--more" ng-click="$ctrl.loadMore()">Load More</button> -->

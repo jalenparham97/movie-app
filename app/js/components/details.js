@@ -3,9 +3,9 @@
 const more = {
   templateUrl: `app/js/templates/details.html`,
 
-  controller: ["SearchService", "MovieService", function(SearchService, MovieService) {
+  controller: ["SearchService", function(SearchService) {
     const vm = this;
-    vm.movie = SearchService.movie || MovieService.movie;
+    vm.movie = SearchService.movie;
     console.log(vm.movie);
   }]
 }

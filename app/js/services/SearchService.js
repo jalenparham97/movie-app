@@ -7,6 +7,7 @@ function SearchService($http) {
   vm.movie = null;
   vm.page = 1;
   vm.lastSearchWord = null;
+  vm.lastSearchWordMovies = null;
 
   vm.resetResultsArr = () => {
     vm.results = [];
@@ -24,6 +25,19 @@ function SearchService($http) {
         vm.results.push(response.data.results[i]);
       }
     });
+  }
+
+  vm.searchOnlyMovies = (searchWord) => {
+    return $http({
+      method: "GET",
+      url: `https://api.themoviedb.org/3/search/movie?api_key=422b1f14ef4eff0f32a9894fac9b11c6&language=en-US&query=${searchWord}&page=1&include_adult=false`
+    }).then((response) => {
+      console.log(response);
+      vm.lastSearchWordMovies = searchWord;
+      for(let i = 0; i < response.data.results.length; i++) {
+        vm.results.push(response.data.results[i]);
+      }
+    })
   }
 
   vm.getImdb = (id) => {
@@ -44,13 +58,29 @@ function SearchService($http) {
   }
 
   vm.loadMore = () => {
-    vm.page+= 1;
+    vm.page++;
     console.log(vm.page);
     return $http({
       method: "GET",
       url: `https://api.themoviedb.org/3/search/movie?api_key=422b1f14ef4eff0f32a9894fac9b11c6&language=en-US&query=${vm.lastSearchWord}&page=${vm.page}&include_adult=false`
     }).then((response) => {
       console.log(vm.lastSearchWord);
+      console.log(vm.results);
+      console.log(response);
+      for(let i = 0; i < response.data.results.length; i++) {
+        vm.results.push(response.data.results[i]);
+      }
+    });
+  }
+  
+  vm.loadMoreMovies = () => {
+    vm.page++;
+    console.log(vm.page);
+    return $http({
+      method: "GET",
+      url: `https://api.themoviedb.org/3/search/movie?api_key=422b1f14ef4eff0f32a9894fac9b11c6&language=en-US&query=${vm.lastSearchWordMovies}&page=${vm.page}&include_adult=false`
+    }).then((response) => {
+      console.log(vm.lastSearchWordMovies);
       console.log(vm.results);
       console.log(response);
       for(let i = 0; i < response.data.results.length; i++) {

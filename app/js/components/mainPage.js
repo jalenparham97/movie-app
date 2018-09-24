@@ -6,23 +6,22 @@ const mainPage = {
   controller: ["SearchService", "$location", function(SearchService, $location) {
     const vm = this;
 
+    SearchService.resetResultsArr();
     SearchService.prePopulate().then(vm.results = SearchService.results);
-    
-    vm.search = (searchWord) => {
+  
+    vm.search = searchWord => {
       SearchService.resetResultsArr();
       SearchService.search(searchWord).then(vm.results = SearchService.results);
     }
 
-    vm.getMovie = (id) => {
+    vm.getMovie = id => {
       SearchService.getImdb(id).then(() => {
         vm.movie = SearchService.imdb;
         $location.url("/details");
       });
     }
 
-    vm.loadMore = () => {
-      SearchService.loadMore();
-    }
+    vm.loadMore = () => SearchService.loadMore();
   }]
 }
 
