@@ -24,7 +24,7 @@
       <li ng-repeat="movie in $ctrl.results" class="movie">
         <img ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="Movie Poster">
         <div class="buttons">
-          <button ng-click="$ctrl.addToList(movie)">Add to MyList</button>
+          <button ng-click="$ctrl.addToFireBase(movie.id, movie.title, movie.poster_path)">Add to MyList</button>
           <button ng-click="$ctrl.getMovie(movie.id)">More</button>
         </div> 
       </li>

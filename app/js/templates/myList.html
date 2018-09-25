@@ -24,7 +24,7 @@
   <section class="main__section">
     <ul class="movie__container--list">
       <li ng-repeat="movie in $ctrl.list track by $index" class="movie">
-        <img ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="Movie Poster">
+        <img ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster }}" alt="Movie Poster">
         <div class="buttons">
           <button ng-click="$ctrl.deleteFromList()">Remove From MyList</button>
           <button ng-click="$ctrl.getMovie(movie.id)">More</button>

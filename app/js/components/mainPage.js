@@ -23,6 +23,8 @@ const mainPage = {
 
     vm.addToList = movie => MylistService.addToList(movie);
 
+    vm.addToFireBase = (id, title, poster) => MylistService.addToFireBase(id, title, poster);
+
     vm.loadMore = () => SearchService.loadMore();
   }]
 }
